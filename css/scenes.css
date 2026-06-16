@@ -1,0 +1,91 @@
+#scenes-container {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+}
+
+.s-frame {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Each scene uses the hero background image with a color overlay tint */
+.s-img {
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  width: min(860px, 88vw);
+  height: min(540px, 72vh);
+  transform: scale(0.04);
+  opacity: 0;
+  will-change: transform, opacity;
+  background-image: url('../assets/images/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Per-scene color tint overlays — navy + gold brand palette */
+.s-img[data-scene="0"] { --tint: rgba(26, 39, 86, 0.55); }
+.s-img[data-scene="1"] { --tint: rgba(8, 9, 15, 0.6);   }
+.s-img[data-scene="2"] { --tint: rgba(26, 39, 86, 0.45); }
+.s-img[data-scene="3"] { --tint: rgba(10, 16, 35, 0.65); }
+.s-img[data-scene="4"] { --tint: rgba(26, 39, 86, 0.5);  }
+.s-img[data-scene="5"] { --tint: rgba(8, 9, 15, 0.55);  }
+.s-img[data-scene="6"] { --tint: rgba(20, 30, 65, 0.6);  }
+
+.s-img-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(8, 9, 15, 0.97) 0%,
+      rgba(8, 9, 15, 0.15) 55%,
+      transparent          100%
+    ),
+    var(--tint, rgba(26, 39, 86, 0.5));
+}
+
+.s-text {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2.5rem 3rem;
+  opacity: 0;
+  transform: translateY(14px);
+  will-change: opacity, transform;
+}
+
+.s-area-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.6rem;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-light);
+}
+
+.s-area-title {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--color-paper);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+
+.s-area-services {
+  margin-top: 0.75rem;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(232, 230, 224, 0.32);
+  line-height: 2.2;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-light);
+}

@@ -1,0 +1,76 @@
+#nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem var(--space-xl);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  background: linear-gradient(to bottom, rgba(8,9,15,0.7), transparent);
+}
+#nav.visible { opacity: 1; }
+
+#nav-logo {
+  height: 48px;
+  width: auto;
+  mix-blend-mode: multiply;
+  filter: invert(1) brightness(1.5) sepia(0.25) hue-rotate(185deg) saturate(0.7);
+  opacity: 0.85;
+  transition: opacity 0.4s ease;
+}
+#nav-logo:hover { opacity: 1; }
+
+#nav-contact {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-light);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(232, 230, 224, 0.3);
+  transition: color var(--dur-med) ease;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(184,149,42,0.15);
+}
+#nav-contact:hover { color: var(--color-gold); border-color: var(--color-gold-dim); }
+
+/* Side dots */
+#nav-dots {
+  position: absolute;
+  right: var(--space-xl);
+  top: 50%;
+  z-index: 20;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity var(--dur-slow) ease;
+}
+#nav-dots.visible { opacity: 1; }
+
+.ndot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(184, 149, 42, 0.2);
+  transition: background 0.4s ease, height 0.4s var(--ease-out), border-radius 0.4s ease;
+}
+.ndot.active {
+  background: var(--color-gold);
+  height: 20px;
+  border-radius: 2px;
+}
+
+/* Progress line */
+#progress-line {
+  position: absolute;
+  left: var(--space-xl);
+  bottom: 0;
+  z-index: 20;
+  width: 1px; height: 0;
+  background: linear-gradient(to top, var(--color-gold), transparent);
+  opacity: 0;
+  transition: opacity var(--dur-slow) ease;
+}
+#progress-line.visible { opacity: 0.4; }

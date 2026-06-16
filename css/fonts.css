@@ -1,0 +1,16 @@
+/* Custom fonts — served locally */
+@font-face {
+  font-family: 'Philosopher';
+  src: url('../assets/fonts/Philosopher-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans Italic';
+  src: url('../assets/fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}

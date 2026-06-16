@@ -1,0 +1,39 @@
+:root {
+  /* Brand colors */
+  --color-bg:           #ffffff;
+  --color-bg-dark:      #08090f;
+  --color-navy:         #1a2756;
+  --color-gold:         #b8952a;
+  --color-gold-light:   #d4b05a;
+  --color-gold-dim:     rgba(184,149,42,0.45);
+  --color-gold-faint:   rgba(184,149,42,0.12);
+  --color-paper:        #e8e6e0;
+  --color-text:         #1a1a1a;
+  --color-text-muted:   rgba(26,26,26,0.55);
+  --color-line:         rgba(26,39,86,0.12);
+
+  /* Typography */
+  --font-display:  'Philosopher', Georgia, serif;
+  --font-body:     'OpenSans Italic', 'Inter', sans-serif;
+  --font-sans:     'Inter', system-ui, sans-serif;
+
+  --fw-thin:       200;
+  --fw-light:      300;
+  --fw-regular:    400;
+  --fw-bold:       700;
+
+  /* Spacing */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   1.5rem;
+  --space-lg:   2rem;
+  --space-xl:   3rem;
+  --space-2xl:  4rem;
+
+  /* Timing */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout:  cubic-bezier(0.87, 0, 0.13, 1);
+  --dur-slow:    0.9s;
+  --dur-med:     0.5s;
+  --dur-fast:    0.3s;
+}

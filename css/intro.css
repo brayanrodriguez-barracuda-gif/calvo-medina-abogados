@@ -1,0 +1,65 @@
+#intro {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  text-align: center;
+}
+
+#intro-logo-wrap {
+  position: relative;
+  will-change: opacity, transform;
+}
+
+#intro-logo {
+  width: clamp(220px, 32vw, 380px);
+  height: auto;
+  /* White background of logo JPG — blend it away */
+  mix-blend-mode: multiply;
+  filter: invert(1) brightness(1.6) sepia(0.3) hue-rotate(185deg) saturate(0.8);
+  opacity: 0.92;
+}
+
+#firm-tagline {
+  margin-top: 1.8rem;
+  font-family: var(--font-accent);
+  font-size: 10px;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  will-change: opacity;
+}
+
+#scroll-cue {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(232, 230, 224, 0.2);
+  animation: breathe 3s ease infinite;
+}
+
+#scroll-cue-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-gold-dim), transparent);
+  animation: lineGrow 3s ease infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1;   }
+}
+@keyframes lineGrow {
+  0%, 100% { transform: scaleY(0.3); }
+  50%       { transform: scaleY(1);  }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calvo Medina Abogados — Firma legal en Bogotá, Colombia.">
+  <title>Calvo Medina Abogados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div id="topbar">
+    <span class="tb-item"><span class="tb-dot"></span>contactenos@calvomedina.com</span>
+    <span class="tb-item"><span class="tb-dot"></span>Bogotá: (+57) 601 000 0000</span>
+    <span class="tb-item tb-right">Carrera 70D N° 48A-77 Of 601</span>
+  </div>
+
+  <nav id="nav">
+    <img id="nav-logo-img" src="assets/images/logo.png" alt="Calvo Medina Abogados">
+    <button id="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div id="menu-overlay">
+    <div id="menu-panel">
+      <div id="menu-logo">
+        <img src="assets/images/logo.png" alt="Calvo Medina Abogados">
+      </div>
+      <nav id="menu-nav">
+        <div class="menu-item">
+          <a href="#" onclick="goTo('hero')">Inicio</a>
+        </div>
+        <div class="menu-item">
+          <a href="#" onclick="goTo('nosotros')">Nosotros</a>
+        </div>
+        <div class="menu-item has-sub" id="menu-areas-item">
+          <a href="#" onclick="toggleSub(event)">
+            Áreas de Práctica
+            <span class="menu-arrow">›</span>
+          </a>
+          <div class="menu-sub">
+            <a href="#" onclick="goToArea(0)">Propiedad Intelectual</a>
+            <a href="#" onclick="goToArea(1)">Resolución de Conflictos</a>
+            <a href="#" onclick="goToArea(2)">Derecho Contractual</a>
+            <a href="#" onclick="goToArea(3)">Derecho Corporativo</a>
+            <a href="#" onclick="goToArea(4)">Derecho Laboral</a>
+            <a href="#" onclick="goToArea(5)">Derecho de Familia</a>
+            <a href="#" onclick="goToArea(6)">Derecho Tributario</a>
+          </div>
+        </div>
+        <div class="menu-item">
+          <a href="#" onclick="goTo('contacto')">Contacto</a>
+        </div>
+      </nav>
+      <div id="menu-footer">
+        <span>contactenos@calvomedina.com</span>
+        <span>(+57) 601 000 0000</span>
+      </div>
+    </div>
+    <div id="menu-backdrop" onclick="closeMenu()"></div>
+  </div>
+
+  <div id="nav-dots">
+    <div class="ndot active"></div>
+    <div class="ndot"></div>
+    <div class="ndot"></div>
+    <div class="ndot"></div>
+  </div>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div id="scroll-container">
+    <div id="scroll-track">
+      <div id="main-stage">
+
+        <!-- HERO -->
+        <div id="hero-screen">
+          <div id="hero-bg-img"></div>
+          <div id="hero-vignette"></div>
+          <div id="hero-content">
+            <img id="hero-logo" src="assets/images/logo.png" alt="Calvo Medina Abogados">
+          </div>
+          <div id="hero-scroll-cue">
+            <div id="hero-cue-line"></div>
+            <span>Descubre más</span>
+          </div>
+        </div>
+
+        <!-- NOSOTROS -->
+        <div id="nosotros-screen">
+          <div class="panel-inner">
+            <div class="section-label">Quiénes somos</div>
+            <h2 class="section-title">Tu mejor socio legal<br>en <em>Colombia.</em></h2>
+            <div class="nosotros-cols">
+              <p class="nosotros-body">Con un enfoque pragmático, navegamos el panorama legal colombiano y administramos tus portafolios, asegurando que tus necesidades se satisfagan con precisión e innovación. Confía en Calvo Medina Abogados para ofrecerte una mezcla perfecta de tradición y estrategias vanguardistas que reflejan nuestro compromiso inquebrantable con tus triunfos legales.</p>
+              <div class="nosotros-pillars">
+                <div class="pillar"><span class="pillar-name">Responsabilidad</span><span class="pillar-desc">Piedra angular</span></div>
+                <div class="pillar"><span class="pillar-name">Respeto</span><span class="pillar-desc">Nuestras bases</span></div>
+                <div class="pillar"><span class="pillar-name">Creatividad</span><span class="pillar-desc">Nuestra fuerza</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AREAS -->
+        <div id="areas-screen">
+          <div id="areas-grid">
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(26,39,86,0.82)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">01</span>
+                  <span class="gc-title-over">Propiedad<br>Intelectual</span>
+                  <span class="gc-desc">Marcas · Diseños · Derechos de Autor</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(15,20,50,0.85)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">02</span>
+                  <span class="gc-title-over">Resolución<br>de Conflictos</span>
+                  <span class="gc-desc">Arbitraje · Mediación · Litigio Civil</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(20,30,70,0.82)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">03</span>
+                  <span class="gc-title-over">Derecho<br>Contractual</span>
+                  <span class="gc-desc">Elaboración · Negociación · Interpretación</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(10,15,45,0.88)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">04</span>
+                  <span class="gc-title-over">Derecho<br>Corporativo</span>
+                  <span class="gc-desc">Estructuración · Gobierno · Fusiones</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(26,39,86,0.82)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">05</span>
+                  <span class="gc-title-over">Derecho<br>Laboral</span>
+                  <span class="gc-desc">Contratación · SG-SST · UGPP</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(18,25,65,0.85)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">06</span>
+                  <span class="gc-title-over">Derecho<br>de Familia</span>
+                  <span class="gc-desc">Divorcios · Custodia · Sucesiones</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+            <div class="grid-card">
+              <div class="gc-img" style="--tint:rgba(12,18,55,0.88)">
+                <div class="gc-overlay-text">
+                  <span class="gc-num">07</span>
+                  <span class="gc-title-over">Derecho<br>Tributario</span>
+                  <span class="gc-desc">Planificación Fiscal · Cumplimiento</span>
+                </div>
+              </div>
+              <div class="gc-expand-content">
+                <span class="gce-num"></span>
+                <h3 class="gce-title"></h3>
+                <p class="gce-p1"></p>
+                <p class="gce-p2"></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div id="contacto-screen">
+          <div class="panel-inner">
+            <div class="section-label">Contacto</div>
+            <div class="contact-grid">
+              <div>
+                <h2 class="section-title">Hablemos de<br>tu <em>caso.</em></h2>
+                <div class="contact-details">
+                  <div class="contact-item"><span class="contact-lbl">Dirección</span><span class="contact-val">Carrera 70D N° 48A-77 Of 601<br>Bogotá D.C. 111071, Colombia</span></div>
+                  <div class="contact-item"><span class="contact-lbl">Correo</span><span class="contact-val">contactenos@calvomedina.com</span></div>
+                  <div class="contact-item"><span class="contact-lbl">Teléfono</span><span class="contact-val">(+57) 601 000 0000</span></div>
+                </div>
+              </div>
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-field"><label for="f-name">Nombre completo</label><input id="f-name" type="text" placeholder="Tu nombre" autocomplete="name"></div>
+                <div class="form-field"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" placeholder="tu@email.com" autocomplete="email"></div>
+                <div class="form-field"><label for="f-area">Área de consulta</label><input id="f-area" type="text" placeholder="Ej. Propiedad Intelectual"></div>
+                <div class="form-field"><label for="f-msg">Mensaje</label><textarea id="f-msg" rows="4" placeholder="Cuéntanos brevemente tu caso..."></textarea></div>
+                <button type="submit" class="form-btn">Enviar consulta</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <footer id="site-footer">
+          <span class="footer-left">© 2026 Calvo Medina Abogados · Bogotá, Colombia</span>
+          <span class="footer-right">Responsabilidad · Respeto · Creatividad</span>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
